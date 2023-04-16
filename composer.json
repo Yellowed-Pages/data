@@ -1,0 +1,17 @@
+{
+    "name": "yellowed-pages/data",
+    "description": "Data utilities for Yellowed Pages",
+    "type": "project",
+    "license": "GPLv3",
+    "autoload": {
+        "psr-4": {
+            "YellowedPages\\Data\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marco Zanella",
+            "email": "marco.zanella.1991@gmail.com"
+        }
+    ]
+}

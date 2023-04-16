@@ -1,0 +1,201 @@
+{
+    "properties": {
+        "id": {
+            "type": "keyword",
+            "index": false
+        },
+        "name": {
+            "type": "keyword",
+            "fields": {
+                "text": {
+                    "type": "text",
+                    "analyzer": "text_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_prefix": {
+                    "type": "text",
+                    "analyzer": "text_prefix_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_infix": {
+                    "type": "text",
+                    "analyzer": "text_infix_index",
+                    "search_analyzer": "text_search"
+                }
+            }
+        },
+        "type": {
+            "type": "keyword"
+        },
+        "reference": {
+            "type": "keyword",
+            "fields": {
+                "text": {
+                    "type": "text",
+                    "analyzer": "text_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_prefix": {
+                    "type": "text",
+                    "analyzer": "text_prefix_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_infix": {
+                    "type": "text",
+                    "analyzer": "text_infix_index",
+                    "search_analyzer": "text_search"
+                }
+            }
+        },
+        "school": {
+            "type": "keyword"
+        },
+        "subschool": {
+            "type": "keyword"
+        },
+        "tags": {
+            "type": "keyword"
+        },
+        "levels": {
+            "type": "nested",
+            "properties": {
+                "name": {
+                    "type": "keyword"
+                },
+                "level": {
+                    "type": "long"
+                }
+            }
+        },
+        "components": {
+            "type": "keyword"
+        },
+        "castingTime": {
+            "type": "keyword",
+            "index": false
+        },
+        "radius": {
+            "type": "keyword",
+            "index": false
+        },
+        "area": {
+            "type": "keyword",
+            "index": false
+        },
+        "target": {
+            "type": "keyword",
+            "index": false
+        },
+        "effect": {
+            "type": "keyword",
+            "fields": {
+                "text": {
+                    "type": "text",
+                    "analyzer": "text_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_prefix": {
+                    "type": "text",
+                    "analyzer": "text_prefix_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_infix": {
+                    "type": "text",
+                    "analyzer": "text_infix_index",
+                    "search_analyzer": "text_search"
+                }
+            }
+        },
+        "duration": {
+            "type": "keyword",
+            "index": false
+        },
+        "savingThrow": {
+            "type": "keyword",
+            "index": false
+        },
+        "spellResistance": {
+            "type": "keyword",
+            "index": false
+        },
+        "harmless": {
+            "type": "keyword",
+            "index": "false"
+        },
+        "tables": {
+            "type": "object"
+        },
+        "manuals": {
+            "type": "keyword"
+        },
+        "description": {
+            "type": "keyword",
+            "fields": {
+                "text": {
+                    "type": "text",
+                    "analyzer": "text_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_prefix": {
+                    "type": "text",
+                    "analyzer": "text_prefix_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_infix": {
+                    "type": "text",
+                    "analyzer": "text_infix_index",
+                    "search_analyzer": "text_search"
+                }
+            }
+        },
+        "shortDescription": {
+            "type": "keyword",
+            "fields": {
+                "text": {
+                    "type": "text",
+                    "analyzer": "text_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_prefix": {
+                    "type": "text",
+                    "analyzer": "text_prefix_index",
+                    "search_analyzer": "text_search"
+                },
+                "text_infix": {
+                    "type": "text",
+                    "analyzer": "text_infix_index",
+                    "search_analyzer": "text_search"
+                }
+            }
+        },
+        "subtype": {
+            "type": "keyword"
+        },
+        "requirement": {
+            "type": "keyword",
+            "index": false
+        },
+        "benefit": {
+            "type": "keyword",
+            "index": false
+        },
+        "regular": {
+            "type": "keyword",
+            "index": false
+        },
+        "special": {
+            "type": "keyword",
+            "index": false
+        }
+    },
+    "dynamic_templates": [
+        {
+            "ignore_tables": {
+                "path_match": "tables.*",
+                "mapping": {
+                    "index": false
+                }
+            }
+        }
+    ]
+}

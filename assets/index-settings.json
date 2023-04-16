@@ -1,0 +1,63 @@
+{
+    "index": {
+        "max_ngram_diff": 16
+    },
+    "analysis": {
+        "filter": {
+            "prefix": {
+                "type": "edge_ngram",
+                "min_gram": 1,
+                "max_gram": 100
+            },
+            "infix": {
+                "type": "ngram",
+                "min_gram": 2,
+                "max_gram": 16
+            },
+            "stopwords": {
+                "type": "stop",
+                "stopwords": "_italian_"
+            },
+            "synonyms": {
+                "type": "synonym",
+                "synonyms": []
+            },
+            "stemmer": {
+                "type": "stemmer",
+                "language": "light_italian"
+            },
+            "elision": {
+                "type": "elision",
+                "articles": [
+                    "c", "l", "all", "dall", "dell",
+                    "nell", "sull", "coll", "pell",
+                    "gl", "agl", "dagl", "degl", "negl",
+                    "sugl", "un", "m", "t", "s", "v", "d"
+                ],
+                "articles_case": true
+            }
+        },
+        "analyzer": {
+            "text_index": {
+                "char_filter": ["html_strip"],
+                "tokenizer": "standard",
+                "filter": ["classic", "asciifolding", "elision", "trim", "lowercase", "stopwords", "stemmer", "synonyms"]
+            },
+            "text_prefix_index": {
+                "char_filter": ["html_strip"],
+                "tokenizer": "standard",
+                "filter": ["classic", "asciifolding", "elision", "trim", "lowercase", "stopwords", "stemmer", "synonyms", "prefix"]
+            },
+            "text_infix_index": {
+                "char_filter": ["html_strip"],
+                "tokenizer": "standard",
+                "filter": ["classic", "asciifolding", "elision", "trim", "lowercase", "stopwords", "stemmer", "synonyms", "infix"]
+            },
+            "text_search": {
+                "char_filter": ["html_strip"],
+                "tokenizer": "standard",
+                "filter": ["classic", "asciifolding", "elision", "trim", "lowercase", "stopwords", "stemmer"]
+            }
+	}
+    }
+}
