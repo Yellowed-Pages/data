@@ -13,5 +13,8 @@
             "name": "Marco Zanella",
             "email": "marco.zanella.1991@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "phpunit/phpunit": "^10.1"
+    }
 }
