@@ -1,4 +1,4 @@
-# Data | Yellowed Pages
+# Data | Yellowed Pages [![PHP Composer](https://github.com/Yellowed-Pages/data/actions/workflows/php.yml/badge.svg)](https://github.com/Yellowed-Pages/data/actions/workflows/php.yml)
 Command-line utilities to manage searchable entities in Yellowed Pages.
 
 ## Installation
