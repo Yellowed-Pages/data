@@ -2,7 +2,7 @@
     "name": "yellowed-pages/data",
     "description": "Data utilities for Yellowed Pages",
     "type": "project",
-    "license": "GPLv3",
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "YellowedPages\\Data\\": "src/"
